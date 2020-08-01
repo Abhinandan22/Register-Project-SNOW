@@ -1,0 +1,19 @@
+Write an onLoad client script for the table :- 
+
+u_addPlaceholderAttribute('u_username', 'Please enter user name');
+u_addPlaceholderAttribute('u_email', 'Please enter email of the user');
+u_addPlaceholderAttribute('u_password', 'Please enter password of the user');
+u_addPlaceholderAttribute('u_confirm_password', 'Please confirm the above password as entered');
+  
+Create a Global UI Script :- 
+
+function u_addPlaceholderAttribute(variableName, hint) {
+   try{
+       var fieldName = g_form.getControl(variableName).name.toString();
+       if (Prototype.Browser.IE) {
+           fieldName.placeholder = hint;
+       } else {
+           $(fieldName).writeAttribute('placeholder', hint);
+       }
+   } catch(err) {}
+}
