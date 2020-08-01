@@ -1,0 +1,8 @@
+if (newValue.length < 4) { 
+	g_form.clearValue('u_username');
+    g_form.showFieldMsg('u_username','Username must be atleast 3 characters','error');
+    
+}
+else
+	
+ g_form.getControl('u_username').style='border-color:#476A34;';
