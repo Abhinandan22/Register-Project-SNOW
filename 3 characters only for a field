@@ -1,0 +1,13 @@
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (newValue === '') {
+      return;
+   }
+	
+if (newValue.length < 4) { 
+	g_form.clearValue('u_username');
+    g_form.showFieldMsg('u_username','Username must be atleast 3 characters','error');
+    
+}
+   //Type appropriate comment here, and begin script below
+   
+}
